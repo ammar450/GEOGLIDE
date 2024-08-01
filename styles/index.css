@@ -1,0 +1,255 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f2024;
+    color: #fff;
+}
+
+:root{
+    --primary-color: #09C933;
+    --secondary-color: #43A9EB;
+    --text-color: #ffffff;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+button.btn{
+    border-radius: 0px !important;
+    font-size: 14px;
+}
+button.primary{
+    background-color: var(--primary-color);
+}
+
+.studio{
+    background-color: #000000;
+}
+
+.sidebar {
+    position: relative;
+    min-height: 100vh;
+    background-color: #222636;
+    border: 3px solid #222636;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* //////  Start Sidebar Widget Styling  //////*/
+
+.sidebar-widget {
+    width: 300px; /* Adjust width as needed */
+    background-color: #000000;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding:  10px;
+    font-size: 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin: 15px 0;
+    color: #ffffff;
+}
+.tab button i {
+    line-height: .7;
+}
+.tab button:hover {
+    background-color: #cccccc38;
+}
+
+.tab button.active {
+    background-color: #cccccc38;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* //////  End Sidebar Widget Styling  //////*/
+
+
+
+
+.map-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    flex: 1;
+}
+
+.custom-tag {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: 2px solid #2c2d32;
+    border-radius: 0;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: center;
+    top: 0;
+    left: 0;
+    /* bottom: 150; */
+    right: 0;
+}
+
+.navbar-input {
+    background-color: #2b2c31;
+    border: 1px solid #2f3035;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+/* ////  Input type=Range  //// */
+.animation-progress {
+    background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 38%, #fff 38%, #fff 100%);
+    border: none !important;
+    border-radius: 8px;
+    height: 10px;
+    width: 80%;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+  }
+  
+.animation-progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #434343;
+}
+
+.theme-container {
+    align-items: center;
+    justify-content: center;
+}
+
+#replay:hover,
+#record:hover,
+#stopRecord:hover {
+    background-color: #1d1e21;
+}
+
+#clearAnimationBtn:hover {
+background-color: #1d1e21;
+}
+
+#departure input, #arrival input{
+    color: #ffffff;
+    background: #222636;
+}
+#departure input::placeholder, #arrival input::placeholder{
+    color: #ffffffd2;
+}
+
+.search-input{
+    margin-bottom: 10px;
+}
+
+.sidebar button.start-animate-btn{
+    position: absolute;
+    width: 80%;
+    background-color: var(--primary-color) !important;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #ffffff !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 100;
+    margin-top: 38px
+};
+
+.theme-container button img {
+    width: 40px;
+    height: 40px;
+}
+
+.distance-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#distanceTag {
+    color: white;
+}
+
+.map-styles-drawer{
+    max-height: 40vh;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.popover-body {
+    background-color: #222636 ;
+}
+.popover-header {
+    background-color: var(--primary-color) !important;
+    color: #ffffff !important;
+}
+
+/* ////  PopOver Scollbar Styling */
+.map-styles-drawer::-webkit-scrollbar {
+    width: 10px;
+}
+.map-styles-drawer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+.map-styles-drawer::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+  /* Handle on hover */
+.map-styles-drawer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#marker {
+    background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
